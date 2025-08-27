@@ -18,7 +18,7 @@ public class PasswordCheck
                 Upper = true;
             }
 
-            else if (Char.IsLower(current_characer))
+            else if (Char.IsLower(current_character))
             {
                 Lower = true;
             }
