@@ -8,6 +8,7 @@ public class PasswordCheck
         bool Lower = false;
         bool Digit = false;
         bool Symbol = false;
+        bool Pass_Length = false;
 
         for (int counter = 0; counter < password.Length; counter++)
         {
@@ -25,7 +26,7 @@ public class PasswordCheck
             else if (Char.IsDigit(current_character))
             {
                 Digit = true;
-            }
+            } 
             else
             {
                 Symbol = true;
@@ -34,20 +35,26 @@ public class PasswordCheck
 
         }
 
+        if (password.Length < 8)
+        {
+            Pass_Length = true; 
+        }
+
         int count = 0;
         if (Upper) count++;
         if (Lower) count++;
         if (Digit) count++;
-        if (Symbol) count++; 
+        if (Symbol) count++;
+        if (Pass_Length) count++;
 
         if (count == 0)
-                return "INELIGIBLE";
-            else if (count == 1)
-                return "WEAK";
-            else if (count == 2 || count == 3)
-                return "MEDIUM";
-            else
-                return "STRONG";
+            return "INELIGIBLE";
+        else if (count == 1)
+            return "WEAK";
+        else if (count == 2 || count == 3 || count == 4) 
+            return "MEDIUM";
+        else
+            return "STRONG";
     }
 }
 
