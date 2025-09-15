@@ -51,10 +51,15 @@
                 return "STRONG";
         }
 
-        
+    
+
+        /// <summary>
+        /// Generates a valid version 4 UUID (Universally Unique Identifier).
+        /// Uses System.Guid.NewGuid() to create a random UUID conforming to RFC 4122.
+        /// </summary>
+        /// <returns>A string representation of a version 4 UUID.</returns>
         public string GenerateUuidV4()
         {
-            
             return Guid.NewGuid().ToString();
         }
 }
