@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PasswordStrengthLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5cbe1c52f851bd1b7d184359192c60f234a4374")]
 [assembly: System.Reflection.AssemblyProductAttribute("PasswordStrengthLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PasswordStrengthLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
