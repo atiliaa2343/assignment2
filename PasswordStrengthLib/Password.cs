@@ -1,7 +1,16 @@
 ﻿namespace PasswordStrengthLib;
 
+ /// <summary>
+    /// Evaluates the strength of a given password based on the presence of uppercase letters, lowercase letters, digits, and symbols.
+    /// The function iterates through each character in the password and checks for these character types.
+    /// The strength is determined by how many of these categories are present:
+    /// 0 = INELIGIBLE, 1 = WEAK, 2 or 3 = MEDIUM, 4 = STRONG.
+    /// </summary>
+    /// <param name="password">The password string to be evaluated.</param>
+    /// <returns>A string indicating the password strength: "INELIGIBLE", "WEAK", "MEDIUM", or "STRONG".</returns>
 public class PasswordCheck
 {
+   
     public string CheckPasswordStrength(string password)
     {
         bool Upper = false;
@@ -38,16 +47,16 @@ public class PasswordCheck
         if (Upper) count++;
         if (Lower) count++;
         if (Digit) count++;
-        if (Symbol) count++; 
+        if (Symbol) count++;
 
         if (count == 0)
-                return "INELIGIBLE";
-            else if (count == 1)
-                return "WEAK";
-            else if (count == 2 || count == 3)
-                return "MEDIUM";
-            else
-                return "STRONG";
+            return "INELIGIBLE";
+        else if (count == 1)
+            return "WEAK";
+        else if (count == 2 || count == 3)
+            return "MEDIUM";
+        else
+            return "STRONG";
     }
 }
 
